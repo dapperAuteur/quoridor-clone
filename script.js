@@ -11,7 +11,7 @@ if (canvas) {
     for (let i = 0; i < boardDimension; i++) {
         for (let j = 0; j < boardDimension; j++) {
             ctx.fillStyle = squareColor
-            ctx.fillRect(j * 25, i * 25, 25, 25);      
+            ctx.fillRect(j * (boardWidth/boardDimension), i * (boardHeight/boardDimension), 25, 25);      
         }        
     }
 }
