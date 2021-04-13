@@ -8,6 +8,10 @@ const boardDimension = 9
 
 if (canvas) {
     let ctx = canvas.getContext('2d')
+    drawBoard(ctx, boardDimension, squareColor, boardWidth, boardHeight)
+}
+
+function drawBoard(ctx, boardDimension, squareColor, boardWidth, boardHeight) {
     for (let i = 0; i < boardDimension; i++) {
         for (let j = 0; j < boardDimension; j++) {
             ctx.fillStyle = squareColor
