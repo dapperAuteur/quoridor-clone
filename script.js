@@ -29,6 +29,13 @@ function drawRect(ctx, startX, startY, rectWidth, rectHeight, rectColor) {
     ctx.fillRect(startX, startY, rectWidth, rectHeight)
 }
 
+// helper function to draw player pawn
+function drawPlayerPawn(ctx, x, y, pawnColor) {
+    ctx.fillStyle = pawnColor
+    ctx.arc(x, y, 10, 0, Math.PI * 2);
+    ctx.fill()
+}
+
 // player move functions allow player to place a fence on the board or move the player pawn.
 
 // isLegalMove checks if the player move the legal.
