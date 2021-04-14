@@ -4,6 +4,7 @@ const canvas = document.getElementById('quoridorBoard')
 const boardWidth = canvas.width
 const boardHeight = canvas.height
 const squareColor = 'rgb(0,200,0, 0.95)'
+const areaBetweenSquares = 'rgb(0,0,200, 0.95)'
 const squareWidth = 25
 const boardDimension = 9
 
