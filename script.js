@@ -33,18 +33,6 @@ function placeFenceHorizontally(ctx,fenceStartX, fenceStartY) {
     drawRect(ctx, fenceStartX, fenceStartY, fenceLength, fenceWidth, fenceColor);
 }
 
-if (canvas) {
-    let ctx = canvas.getContext('2d')
-    // draw game surface
-    drawBoard(ctx, boardDimension, boardWidth, boardHeight, squareColor)
-    // practice functions, not used in game
-    drawRect(ctx, 0, 0, 10, 10, fenceColor)
-    drawRect(ctx, 365, 0, 5, 10, fenceColor)
-    // practice functions for drawing fences, not used in game
-    placeFenceVertically(ctx, 30, 0)
-    placeFenceHorizontally(ctx, 79.16, 30)
-}
-
 // draw board is the function used to draw the game board.
 function drawBoard(ctx, boardDimension, boardWidth, boardHeight, boardColor) {
     // draw space between squares
@@ -55,4 +43,17 @@ function drawBoard(ctx, boardDimension, boardWidth, boardHeight, boardColor) {
             drawRect(ctx, (j * (boardWidth/boardDimension)) + 5, (i * (boardHeight/boardDimension)) + 5, squareWidth, squareWidth, boardColor);
         }        
     }
+}
+
+// draw game surface/board
+if (canvas) {
+    let ctx = canvas.getContext('2d')
+    // draw game surface
+    drawBoard(ctx, boardDimension, boardWidth, boardHeight, squareColor)
+    // practice functions, not used in game
+    drawRect(ctx, 0, 0, 10, 10, fenceColor)
+    drawRect(ctx, 365, 0, 5, 10, fenceColor)
+    // practice functions for drawing fences, not used in game
+    placeFenceVertically(ctx, 30, 0)
+    placeFenceHorizontally(ctx, 79.16, 30)
 }
