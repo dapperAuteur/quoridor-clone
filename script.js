@@ -64,6 +64,16 @@ function placeFenceHorizontally(ctx,fenceStartX, fenceStartY) {
     }
 }
 
+// movePawn is used to move the player pawn one space or jump player
+function movePawn(ctx, squareStartX, squareStartY, playerPawn) {
+    // check if legal move here
+    if (isLegalMove()) {
+        drawPlayerPawn(ctx, x, y, pawnColor);   
+    } else {
+        console.log("NOT A LEGAL MOVE");
+    }
+}
+
 // draw board is the function used to draw the game board.
 function drawBoard(ctx, boardDimension, boardWidth, boardHeight, boardColor) {
     // draw space between squares
