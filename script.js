@@ -17,6 +17,12 @@ const fenceWidth = 16.11
 const fenceLength = 79.16 // 46.11 + 25 + 8.05
 const fenceColor = 'rgb(139,42,42)'
 
+// define pawn colors
+const player1Pawn = "black"
+const player2Pawn = "purple"
+const player3Pawn = "yellow"
+const player4Pawn = "orange"
+
 // helper functions to create board structure
 function drawRect(ctx, startX, startY, rectWidth, rectHeight, rectColor) {
     ctx.fillStyle= rectColor
