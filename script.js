@@ -87,4 +87,7 @@ if (canvas) {
     // practice functions for drawing fences, not used in game
     placeFenceVertically(ctx, 30, 0)
     placeFenceHorizontally(ctx, 79.16, 30)
+
+    // practice drawing pawns
+    drawPlayerPawn(ctx, 30, 30, player1Pawn)
 }
