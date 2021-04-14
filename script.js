@@ -23,14 +23,24 @@ function drawRect(ctx, startX, startY, rectWidth, rectHeight, rectColor) {
     ctx.fillRect(startX, startY, rectWidth, rectHeight)
 }
 
+// place vertical fence. before placing, check to see if this is a legal move
+function placeFenceVertically(ctx,fenceStartX, fenceStartY) {
+    drawRect(ctx, fenceStartX, fenceStartY, fenceWidth, fenceLength, fenceColor);
+}
+
+// place horizontal fence. before placing, check to see if this is a legal move
+function placeFenceHorizontally(ctx,fenceStartX, fenceStartY) {
+    drawRect(ctx, fenceStartX, fenceStartY, fenceLength, fenceWidth, fenceColor);
+}
+
 if (canvas) {
     let ctx = canvas.getContext('2d')
     drawBoard(ctx, boardDimension, squareColor, boardWidth, boardHeight)
     drawRect(ctx, 0, 0, 10, 10, fenceColor)
     drawRect(ctx, 365, 0, 5, 10, fenceColor)
-    
-    // draw alleys
-    for (let i = 0; i < boardDimension; i++) {
+    // practice functions for drawing fences, not used in game
+    placeFenceVertically(ctx, 30, 0)
+    placeFenceHorizontally(ctx, 79.16, 30)
         for (let j = 0; j < boardDimension; j++) {
     ctx.fillStyle = "black"
     drawRect(ctx, 30, 0, fenceWidth, fenceLength);
