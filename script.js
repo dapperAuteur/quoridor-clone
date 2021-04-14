@@ -23,6 +23,14 @@ function drawRect(ctx, startX, startY, rectWidth, rectHeight, rectColor) {
     ctx.fillRect(startX, startY, rectWidth, rectHeight)
 }
 
+// player move functions allow player to place a fence on the board or move the player pawn.
+
+// isLegalMove checks if the player move the legal.
+// Returns true or false
+function isLegalMove() {
+    return true
+}
+
 // place vertical fence. before placing, check to see if this is a legal move
 function placeFenceVertically(ctx,fenceStartX, fenceStartY) {
     drawRect(ctx, fenceStartX, fenceStartY, fenceWidth, fenceLength, fenceColor);
