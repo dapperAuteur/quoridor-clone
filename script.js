@@ -33,12 +33,22 @@ function isLegalMove() {
 
 // place vertical fence. before placing, check to see if this is a legal move
 function placeFenceVertically(ctx,fenceStartX, fenceStartY) {
-    drawRect(ctx, fenceStartX, fenceStartY, fenceWidth, fenceLength, fenceColor);
+    // check if legal move here
+    if (isLegalMove()) {
+        drawRect(ctx, fenceStartX, fenceStartY, fenceWidth, fenceLength, fenceColor);   
+    } else {
+        console.log("NOT A LEGAL MOVE");
+    }
 }
 
 // place horizontal fence. before placing, check to see if this is a legal move
 function placeFenceHorizontally(ctx,fenceStartX, fenceStartY) {
-    drawRect(ctx, fenceStartX, fenceStartY, fenceLength, fenceWidth, fenceColor);
+    // check if legal move here
+    if (isLegalMove()) {
+        drawRect(ctx, fenceStartX, fenceStartY, fenceLength, fenceWidth, fenceColor);   
+    } else {
+        console.log("NOT A LEGAL MOVE");
+    }
 }
 
 // draw board is the function used to draw the game board.
