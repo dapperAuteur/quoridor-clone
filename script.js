@@ -14,14 +14,22 @@ function drawRect(ctx, startX, startY, rectWidth, rectHeight) {
 if (canvas) {
     let ctx = canvas.getContext('2d')
     drawBoard(ctx, boardDimension, squareColor, boardWidth, boardHeight)
+    ctx.fillStyle= 'rgb(0,0,0, 0.75)'
     
+    // draw alleys
+    for (let i = 0; i < boardDimension; i++) {
+        for (let j = 0; j < boardDimension; j++) {
+            ctx.fillStyle = "blue"
+            drawRect(ctx, (j * 30) + 5, (i * 30) + 5, 25, 25);
+        }        
+    }
 }
 
 function drawBoard(ctx, boardDimension, squareColor, boardWidth, boardHeight) {
     for (let i = 0; i < boardDimension; i++) {
         for (let j = 0; j < boardDimension; j++) {
             ctx.fillStyle = squareColor
-            drawRect(ctx, j * (boardWidth/boardDimension), i * (boardHeight/boardDimension), 25, 25);      
+            drawRect(ctx, (j * (boardWidth/boardDimension)) + 5, (i * (boardHeight/boardDimension)) + 5, 25, 25);
         }        
     }
 }
