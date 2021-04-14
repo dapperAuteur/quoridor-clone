@@ -21,7 +21,7 @@ if (canvas) {
     for (let i = 0; i < boardDimension; i++) {
         for (let j = 0; j < boardDimension; j++) {
     ctx.fillStyle = "black"
-    drawRect(ctx, 30, 0, 16.11, 46.11);
+    drawRect(ctx, 30, 0, 16.11, 46.11 + 25 + 8.05);
             ctx.fillStyle = "blue"
             drawRect(ctx, (j * 30) + 5, (i * 30) + 5, 25, 25);
         }        
