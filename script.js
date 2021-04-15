@@ -146,5 +146,14 @@ if (canvas) {
     placeFenceHorizontally(ctx, 79.16, 30)
 
     // practice drawing pawns
-    drawPlayerPawn(ctx, 30, 30, player1Pawn)
+    // why does the correct color not display for each pawn. the last color is used for both pawns
+    // drawPlayerPawn(ctx, playerPawn1.location.x, playerPawn1.location.y, playerPawn1.color)
+    // drawPlayerPawn(ctx, playerPawn2.location.x, playerPawn2.location.y, playerPawn2.color)
+
+    // why does add a 3rd or a 4th player/pawn cause the arc() to create triangles on the board regardless of placement of players/pawns
+    // drawPlayerPawn(ctx, playerPawn3.location.x, playerPawn3.location.y, playerPawn3.color)
+    // drawPlayerPawn(ctx, playerPawn4.location.x, playerPawn4.location.y, playerPawn4.color)
+    // ctx.fillStyle = playerPawn3.color
+    // ctx.arc(18, 182, 10, 0, Math.PI * 2);
+    // ctx.fill()
 }
