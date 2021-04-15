@@ -17,11 +17,54 @@ const fenceWidth = 16.11
 const fenceLength = 79.16 // 46.11 + 25 + 8.05
 const fenceColor = 'rgb(139,42,42)'
 
+// refactor to turn player to object
+/*
+player props: {
+loc {x, y} is the center of the player pawn which is a circle,
+color
+}
+*/
+
 // define pawn colors
-const player1Pawn = "black"
-const player2Pawn = "purple"
-const player3Pawn = "yellow"
-const player4Pawn = "orange"
+const player1Color = "black"
+const player2Color = "purple"
+const player3Color = "yellow"
+const player4Color = "orange"
+
+// PlayerPawns are the objects representing each player and pawn
+let playerPawn1 = {
+    location: {
+        x: 182,
+        y: 18
+    },
+    color: player1Color
+}
+
+let playerPawn2 = {
+    location: {
+        x: 182,
+        y: 347
+    },
+    color: player2Color
+}
+
+let playerPawn3 = {
+    location: {
+        x: 18,
+        y: 182
+    },
+    color: player3Color
+}
+
+let playerPawn4 = {
+    location: {
+        x: 347,
+        y: 182
+    },
+    color: player4Color
+}
+
+
 
 // helper functions to create board structure
 function drawRect(ctx, startX, startY, rectWidth, rectHeight, rectColor) {
