@@ -8,22 +8,33 @@ const areaBetweenSquares = 'rgb(0,0,200, 0.95)'
 const squareWidth = 25
 const boardDimension = 9
 
+// create graph to represent board squares as nodes and alleys as edges
+// gameBoard is the graph that represents the game board
+let gameBoard = {
+    
+}
+
 // define alleys on board
 const numAlleys = 10
 const alleyWidth = 16.11
 
 // define fence
+// The edges are deleted when a fence is placed on the board.
 const fenceWidth = 16.11
 const fenceLength = 79.16 // 46.11 + 25 + 8.05
 const fenceColor = 'rgb(139,42,42)'
 
-// refactor to turn player to object
-/*
-player props: {
-loc {x, y} is the center of the player pawn which is a circle,
-color
+// placeFence will place a fence on the board after checking if it's a legal move
+function placeFence(ctx) {
+    // check if vertical or horizontal?
+    if (true) {
+        placeFenceVertically(ctx,fenceStartX, fenceStartY) 
+    } else {
+        placeFenceHorizontally(ctx,fenceStartX, fenceStartY)
+    }
 }
-*/
+
+// Player and pawn info
 
 // define pawn colors
 const player1Color = "black"
