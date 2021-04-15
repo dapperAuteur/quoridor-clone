@@ -17,3 +17,13 @@ Alley x-coord should be at 0, 30-35, , 95, 125, 155, 185, 215, 245
 Board y-coord should be at 5, 35, 65, 95, 125, 155, 185, 215, 245
 Alley y-coord should be at 0, 35, 65, 95, 125, 155, 185, 215, 245
     drawRect(ctx, 30, 0, fenceWidth, fenceLength, fenceColor);
+
+# BUGS
+why does add a 3rd or a 4th player/pawn cause the arc() to create triangles on the board regardless of placement of players/pawns
+```
+drawPlayerPawn(ctx, playerPawn3.location.x, playerPawn3.location.y, playerPawn3.color)
+drawPlayerPawn(ctx, playerPawn4.location.x, playerPawn4.location.y, playerPawn4.color)
+ctx.fillStyle = playerPawn3.color
+ctx.arc(18, 182, 10, 0, Math.PI * 2);
+ctx.fill()
+```
