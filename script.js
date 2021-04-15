@@ -146,7 +146,6 @@ if (canvas) {
     placeFenceHorizontally(ctx, 79.16, 30)
 
     // practice drawing pawns
-    // why does the correct color not display for each pawn. the last color is used for both pawns
     drawPlayerPawn(ctx, playerPawn1.location.x, playerPawn1.location.y, playerPawn1.color)
     drawPlayerPawn(ctx, playerPawn2.location.x, playerPawn2.location.y, playerPawn2.color)
 }
