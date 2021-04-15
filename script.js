@@ -84,6 +84,10 @@ function drawPlayerPawn(ctx, x, y, pawnColor) {
 // isLegalMove checks if the player move the legal.
 // Returns true or false
 function isLegalMove() {
+    /*
+    strategies for checking if legal
+    check color(s) in the place(s) player is attempting to place pawn/fence
+    */
     return true
 }
 
