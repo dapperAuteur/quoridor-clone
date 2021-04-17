@@ -8,12 +8,6 @@ const areaBetweenSquares = 'rgb(0,0,200, 0.95)'
 const squareWidth = 25
 const boardDimension = 9
 
-// create graph to represent board squares as nodes and alleys as edges
-// gameBoard is the graph that represents the game board
-let gameBoard = {
-    
-}
-
 // define alleys on board
 const numAlleys = 10
 const alleyWidth = 16.11
