@@ -284,10 +284,14 @@ function isLegalMove(ctx,x,y) {
     strategies for checking if legal
     check color(s) in the place(s) player is attempting to place pawn/fence
     how to get pixel color
+    colors to check for:
+        squareColor = [0, 191, 10, 254] = green
+        areaBetweenSquares = [0, 0, 200, 242] = blue
+        fenceColor = [139, 42, 42, 255] or [118, 35, 66, 253] = brown ? they should be the same. Slightly different by the eye.
     */
     let imgData = ctx.getImageData(playerPawn1.location.x, playerPawn1.location.y,1,1);
     // ctx.putImageData(imgData, 10, 70);
-    console.log(imgData);
+    // console.log(imgData);
     return true
 }
 
