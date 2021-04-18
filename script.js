@@ -222,10 +222,10 @@ function placeFence(ctx) {
 // Player and pawn info
 
 // define pawn colors
-const player1Color = "black"
-const player2Color = "purple"
-const player3Color = "yellow"
-const player4Color = "orange"
+const player1Color = 'rgb(0,0,0,1)'
+const player2Color = 'rgb(128,0,128,1)'
+const player3Color = 'rgb(255,255,1)'
+const player4Color = 'rgb(255,165,1)'
 
 // PlayerPawns are the objects representing each player and pawn
 let playerPawn1 = {
