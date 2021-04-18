@@ -279,18 +279,22 @@ function drawPlayerPawn(ctx, x, y, pawnColor) {
 
 // isLegalMove checks if the player move the legal.
 // Returns true or false
-function isLegalMove() {
+function isLegalMove(ctx,x,y) {
     /*
     strategies for checking if legal
     check color(s) in the place(s) player is attempting to place pawn/fence
+    how to get pixel color
     */
+    let imgData = ctx.getImageData(playerPawn1.location.x, playerPawn1.location.y,1,1);
+    // ctx.putImageData(imgData, 10, 70);
+    console.log(imgData);
     return true
 }
 
 // place vertical fence. before placing, check to see if this is a legal move
 function placeFenceVertically(ctx,fenceStartX, fenceStartY) {
     // check if legal move here
-    if (isLegalMove()) {
+    if (isLegalMove(ctx,fenceStartX, fenceStartY)) {
         drawRect(ctx, fenceStartX, fenceStartY, fenceWidth, fenceLength, fenceColor);   
     } else {
         console.log("NOT A LEGAL MOVE");
@@ -300,7 +304,7 @@ function placeFenceVertically(ctx,fenceStartX, fenceStartY) {
 // place horizontal fence. before placing, check to see if this is a legal move
 function placeFenceHorizontally(ctx,fenceStartX, fenceStartY) {
     // check if legal move here
-    if (isLegalMove()) {
+    if (isLegalMove(ctx,fenceStartX, fenceStartY)) {
         drawRect(ctx, fenceStartX, fenceStartY, fenceLength, fenceWidth, fenceColor);   
     } else {
         console.log("NOT A LEGAL MOVE");
@@ -310,7 +314,7 @@ function placeFenceHorizontally(ctx,fenceStartX, fenceStartY) {
 // movePawn is used to move the player pawn one space or jump player
 function movePawn(ctx, squareStartX, squareStartY, playerPawn) {
     // check if legal move here
-    if (isLegalMove()) {
+    if (isLegalMove(ctx,fenceStartX, fenceStartY)) {
         drawPlayerPawn(ctx, x, y, pawnColor);   
     } else {
         console.log("NOT A LEGAL MOVE");
@@ -344,4 +348,9 @@ if (canvas) {
     // practice drawing pawns
     drawPlayerPawn(ctx, playerPawn1.location.x, playerPawn1.location.y, playerPawn1.color)
     drawPlayerPawn(ctx, playerPawn2.location.x, playerPawn2.location.y, playerPawn2.color)
+
+    // how to get pixel color
+    var imgData = ctx.getImageData(playerPawn1.location.x, playerPawn1.location.y,1,1);
+    // ctx.putImageData(imgData, 10, 70);
+     console.log(imgData);
 }
